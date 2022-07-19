@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 
 import { Right, Up } from '../../Icons/Icons';
 
+const gsap = global.gsap;
+
 const SideProduct = ({ name, Side }) => {
+  useEffect(() => {
+    slideSide();
+
+    return () => {};
+  });
+
+  const slideSide = () => {
+    gsap.fromTo(
+      '.side',
+      {
+        opacity: 0,
+        x: '100%',
+        duration: 1.0,
+      },
+      {
+        opacity: 1,
+        x: '0',
+        duration: 1.0,
+      }
+    );
+  };
+
   return (
     <div className="hidden md:block md:col-span-2 flex">
       <div className=" absolute top-1/2 left-3/4 -translate-x-16">
@@ -11,7 +35,7 @@ const SideProduct = ({ name, Side }) => {
           <Right className="w-10 h-10" />
         </button>
       </div>
-      <div className="absolute top-1/4 right-0 transform -translate-y-12 h-7/12 text-right">
+      <div className="absolute top-1/4 right-0 transform -translate-y-12 h-7/12 text-right side">
         <Image
           className="h-full rounded-md"
           src={Side}

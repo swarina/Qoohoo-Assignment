@@ -20,6 +20,12 @@ function MyApp({ Component, pageProps }) {
           href="https://fonts.googleapis.com/css2?family=Jockey+One&family=Londrina+Outline&display=swap"
           rel="stylesheet"
         />
+
+        {/* gsap */}
+        <script
+          src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"
+          defer
+        ></script>
       </Head>
       <Component key={router.pathname} {...pageProps} />
     </>

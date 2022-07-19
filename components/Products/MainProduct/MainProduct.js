@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-// import gsap from 'gsap';
 
 const gsap = global.gsap;
 
@@ -40,7 +39,6 @@ const FeaturedProduct = ({ name, Hero }) => {
         opacity: 1,
         x: '0',
         duration: 1.0,
-        //  onComplete: animateProducts,
       }
     );
   };
@@ -52,9 +50,9 @@ const FeaturedProduct = ({ name, Hero }) => {
           {name}
         </h1>
       </div>
-      <div className="md:col-span-4 relative order-1 md:order-2 hero">
+      <div className="md:col-span-4 absolute order-1 md:order-2 hero bottom-0 left-1/4">
         <Image
-          className="md:absolute md:bottom-0 z-10 mt-10"
+          className="md:absolute md:bottom-0 z-10"
           src={Hero}
           alt={name}
           layout="fixed"

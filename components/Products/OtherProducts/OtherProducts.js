@@ -27,7 +27,7 @@ const OtherProducts = ({ name, img, price }) => {
     );
   };
   return (
-    <div className="bg-white rounded-3xl shadow-2xl relative h-32 w-48 p-4 overflow-hidden flex flex-col opacity-1 product-card">
+    <div className="bg-white rounded-3xl shadow-2xl relative h-40 w-48 p-4 overflow-hidden flex flex-col opacity-1 product-card">
       <h3 className="text-lg">{name}</h3>
       <h3 className="text-lg font-medium mt-auto">$ {price}</h3>
       <Image

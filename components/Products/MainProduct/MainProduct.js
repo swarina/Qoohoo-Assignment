@@ -1,6 +1,27 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
 
+// Components
+import OtherProducts from '../../Products/OtherProducts/OtherProducts';
+
+import Product1 from '../../../assets/images/product1.png';
+import Product2 from '../../../assets/images/product2.png';
+
+// Other Products
+const products = [
+  {
+    name: 'Red Prada Bag',
+    price: '60',
+    image: Product1,
+  },
+  {
+    name: 'Beige High Heels',
+    price: '45',
+    image: Product2,
+  },
+];
+
+// Gsap
 const gsap = global.gsap;
 
 const FeaturedProduct = ({ name, Hero }) => {
@@ -59,7 +80,14 @@ const FeaturedProduct = ({ name, Hero }) => {
           height="800"
           width="500"
         />
-        <span className="hidden md:block bg-gray-900 opacity-10 h-[42rem] w-[42rem] absolute top-6 left-1/2 transform -translate-x-1/2 rounded-full" />
+        <span className="hidden md:block bg-red-600 opacity-10 h-[42rem] w-[42rem] absolute top-6 left-1/2 transform -translate-x-1/2 rounded-full" />
+      </div>
+
+      {/* Other Products  */}
+      <div className="hidden md:col-span-2 md:order-3 md:flex md:flex-col md:justify-center gap-6 md:ml-80 translate-x-60 h-full">
+        {products.map(({ id, name, image, price }) => (
+          <OtherProducts key={id} name={name} img={image} price={price} />
+        ))}
       </div>
     </div>
   );

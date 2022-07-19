@@ -1,10 +1,12 @@
 import React from 'react';
-import Hero from '../../assets/images/hero.png';
-import Side from '../../assets/images/side.jpg';
 
 // Components
 import MainProduct from '../Products/MainProduct/MainProduct';
 import SideProduct from '../Products/SideProduct/SideProduct';
+
+// Images
+import Hero from '../../assets/images/hero.png';
+import Side from '../../assets/images/side.jpg';
 
 const Layout = () => {
   const mainName = 'BLACK CAMI CROP TOP';

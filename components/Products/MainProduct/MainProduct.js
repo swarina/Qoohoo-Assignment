@@ -15,7 +15,7 @@ const FeaturedProduct = ({ name, Hero }) => {
           src={Hero}
           alt={name}
           layout="fixed"
-          height="900"
+          height="800"
           width="500"
         />
         <span className="hidden md:block bg-gray-900 opacity-10 h-[42rem] w-[42rem] absolute top-6 left-1/2 transform -translate-x-1/2 rounded-full" />

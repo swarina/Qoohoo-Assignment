@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 // Components
+import Contact from '../../Contact/Contact';
 import OtherProducts from '../../Products/OtherProducts/OtherProducts';
 import { Plus } from '../../Icons/Icons';
 
@@ -73,7 +74,12 @@ const FeaturedProduct = ({ name, Hero }) => {
         <h1 className="text-3xl md:text-6xl font-bold text-center md:text-left flex-1 md:flex md:items-center opacity-1">
           {name}
         </h1>
+
+        <div className="-translate-y-10">
+          <Contact />
+        </div>
       </div>
+
       <div className="md:col-span-4 absolute order-1 md:order-2 hero bottom-0 left-1/4">
         <Image
           className="md:absolute md:bottom-0 z-10"

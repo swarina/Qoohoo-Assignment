@@ -1,7 +1,5 @@
 # Qoohoo Assignment
 
-A basic clone of WhatsApp Web Application using React and Firebase.
-
 ## Tech Stack:
 
 - **Frontend:** Next/Tailwind
